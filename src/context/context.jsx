@@ -9,6 +9,7 @@ export const InputContext = createContext();
 
 export const ContextProvider= ({children}) => {
     const [counter,setCounter] = useState(0);
+    
   return(  
     <CounterContext.Provider value={{counter,setCounter}}>
         {children}
@@ -18,9 +19,10 @@ export const ContextProvider= ({children}) => {
 }
 
 export const InputProvider = ({children}) =>{
-    const [input,setInput]=useState("")
+    const [input1,setInput1]=useState("")
+    const [input2,setInput2]=useState("")
     return (
-    <InputContext.Provider value={{input,setInput}}>
+    <InputContext.Provider value={{input1,setInput1,input2,setInput2}}>
     {children}
     </InputContext.Provider>
     )
